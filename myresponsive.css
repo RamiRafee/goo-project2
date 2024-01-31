@@ -1,0 +1,46 @@
+
+.web-development-services .card-item .pimg {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.web-development-services .card-item:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+.web-development-services .card-item:hover .contentBox .buy {
+    top: 20px;
+    opacity: 1;
+}
+.web-development-services .card-item:hover .pimg {
+    transform: scale(1.1) rotate(5deg); /* Zoom in and rotate the pimg on hover */
+}
+
+.web-development-services .cardSale {
+    transition: transform 0.3s ease-in-out;
+}
+
+.web-development-services .cardSale:hover {
+    animation: rotateCard 0.3s ease-in-out forwards; /* Use keyframes for the sale card rotation on hover */
+}
+
+.web-development-services .cardSale:hover .pimg {
+    transform: scale(1.1) ; /* Zoom in and rotate the pimg on hover */
+}
+
+@keyframes rotateCard {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

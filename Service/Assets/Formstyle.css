@@ -1,0 +1,349 @@
+/* Multi Step Form Style */
+h1 {
+    text-align: center;
+}
+h2 {
+    margin: 0;
+}
+#multi-step-form-container {
+    height: auto;
+    margin: 10vh;
+    padding-bottom: 10vh;
+}
+.text-center {
+    text-align: center;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.pl-0 {
+    padding-left: 0;
+}
+#multi-step-form-container .button {
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #4361ee;
+    background-color: #4361ee;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#multi-step-form-container .submit-btn {
+    
+    background-color: #0e9594;
+}
+.mt-3 {
+    margin-top: 2rem;
+}
+.d-none {
+    display: none;
+}
+.form-step {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+}
+.font-normal {
+    margin: 5px;
+    font-weight: normal;
+}
+ul.form-stepper {
+    counter-reset: section;
+    margin-bottom: 3rem;
+}
+ul.form-stepper .form-stepper-circle {
+    position: relative;
+}
+ul.form-stepper .form-stepper-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.form-stepper-horizontal {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+ul.form-stepper > li:not(:last-of-type) {
+    margin-bottom: 0.625rem;
+    -webkit-transition: margin-bottom 0.4s;
+    -o-transition: margin-bottom 0.4s;
+    transition: margin-bottom 0.4s;
+}
+.form-stepper-horizontal > li:not(:last-of-type) {
+    margin-bottom: 0 !important;
+}
+.form-stepper-horizontal li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.form-stepper-horizontal li:not(:last-child):after {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    content: "";
+    top: 32%;
+}
+.form-stepper-horizontal li:after {
+    background-color: #dee2e6;
+}
+.form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: #4da3ff;
+}
+.form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+ul.form-stepper li a .form-stepper-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    line-height: 1.7rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 50%;
+}
+.form-stepper .form-stepper-active .form-stepper-circle {
+    background-color: #4361ee !important;
+    color: #fff;
+}
+.form-stepper .form-stepper-active .label {
+    color: #4361ee !important;
+}
+.form-stepper .form-stepper-active .form-stepper-circle:hover {
+    background-color: #4361ee !important;
+    color: #fff !important;
+}
+.form-stepper .form-stepper-unfinished .form-stepper-circle {
+    background-color: #f8f7ff;
+}
+.form-stepper .form-stepper-completed .form-stepper-circle {
+    background-color: #0e9594 !important;
+    color: #fff;
+}
+.form-stepper .form-stepper-completed .label {
+    color: #0e9594 !important;
+}
+.form-stepper .form-stepper-completed .form-stepper-circle:hover {
+    background-color: #0e9594 !important;
+    color: #fff !important;
+}
+.form-stepper .form-stepper-active span.text-muted {
+    color: #fff !important;
+}
+.form-stepper .form-stepper-completed span.text-muted {
+    color: #fff !important;
+}
+.form-stepper .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.form-stepper a {
+    cursor: default;
+}
+/* Select Box Style */
+select {
+  /* Reset Select */
+  margin: 0;
+  appearance: none ;
+  outline: 10px red ;
+  border: 0 ;
+  box-shadow: none ;
+  /* Personalize */
+  flex: 1 ;
+  padding: 0 1em !important;
+  color: #fff;
+  background-color: #4361ee !important;
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 2.5em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #2c3e50;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #0e9594;
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+.select select::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .select select::-webkit-scrollbar-thumb {
+    background-color: #0e9594;
+    border-radius: 6px;
+  }
+  
+  .select select::-webkit-scrollbar-track {
+    background-color: #2c3e50;
+  }
+  
+  /* Custom scrollbar for Firefox */
+  .select select {
+    scrollbar-width: thin;
+    scrollbar-color: #0e9594 #2c3e50;
+  }
+  
+  /* Optional: Styling the arrow */
+  .select select::after {
+    color: #fff; /* Change arrow color */
+  }
+  
+  .select:hover::after {
+    color: #0e9594;
+  }
+
+
+/* File Upload Style */
+.drop_box {
+  margin: 50px ;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h3 {
+  
+  font-weight: 400;
+  color: #2e2e2e ;
+}
+.drop_box header{
+    position:relative;
+    width: auto;
+    background-color: transparent;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.drop_box .btn {
+  text-decoration: none;
+  background-color: #005af0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.drop_box .btn:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #005af0;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+
+/* Text Area Style */
+textarea {
+  background-image: linear-gradient(#F1F1F1 50%, #F9F9F9 50%);
+  background-size: 100% 4rem;
+  background-repeat: repeat-y;
+  background-position: 0 0; /* Initial background position */
+  background-attachment: local; /* Local attachment for scrolling with the content */
+  border: 1px solid #CCC;
+  width: 100%;
+  height: 400px;
+  line-height: 2rem;
+  margin: 0 auto;
+  padding: 4px 8px;
+  overflow-y: auto; 
+}
+
+/* Input Text Fields Styling */
+input {
+  background: 0;
+  border: 0;
+  outline: none;
+  width: 80vw;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+}
+
+input:focus {
+  padding-bottom: 5px;
+}
+
+input:focus +  .line:after {
+  transform: scaleX(1);
+}
+
+.field {
+  margin-top: 8px;
+  position: relative;
+}
+
+.field .line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -8px;
+  background: #bdc3c7;
+}
+
+.field .line:after {
+  content: " ";
+  position: absolute;
+  float: right;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  background: #005af0;
+}
+/* ----------------------- */
+label{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  font-size: 20px;
+}
